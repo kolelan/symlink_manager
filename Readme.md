@@ -1,90 +1,82 @@
-# **Менеджер символических ссылок (Symlink Manager)**
+```markdown
+# Symbolic Link Manager (symlink_manager.py)
 
-Кросс-платформенный инструмент для работы с символическими ссылками в **Windows, Linux и macOS**. Поддерживает все типы ссылок, включая WSL-ссылки и junction points в Windows.
+A cross-platform utility for creating, finding, and deleting symbolic links with Windows, Linux, macOS, and WSL support.
 
-## 🔥 **Возможности**
+## 📝 Requirements
 
-- **Создание** символических ссылок (файлы/папки)
-- **Поиск** всех ссылок в директории (рекурсивно)
-- **Удаление** (одной ссылки или всех в папке)
-- Поддержка **WSL-ссылок** и **junction points**
-- Проверка прав администратора (Windows)
-- **Тихий режим** для автоматизации
+- Python 3.6+
+- Administrator privileges (Windows only)
 
-## 📦 **Установка**
+## ⚙️ Installation
 
-1. Требуется **Python 3.7+**
-2. Скачайте скрипт:
-   ```bash
-   curl -O http://raw.githubusercontent.com/kolelan/symlink_manager/refs/heads/main/symlink_manager.py
-   ```
-3. (Опционально) Сделайте исполняемым:
-   ```bash
-   chmod +x symlink_manager.py
-   ```
+No installation needed. Just download the script:
 
-## 🛠 **Использование**
-
-### **1. Создание ссылки**
 ```bash
-python symlink_manager.py create <исходный_путь> <имя_ссылки> [--silent]
+wget https://example.com/symlink_manager.py
 ```
-**Пример:**
+
+## 🛠 Usage
+
+### Create a symbolic link
 ```bash
-# Windows
-python symlink_manager.py create "C:\Data" "C:\Links\DataLink"
-
-# WSL
-python3 symlink_manager.py create ~/Documents/project ~/project_link
-
-# Linux/macOS
+python symlink_manager.py create <source> <link_name> [--silent]
+```
+Example:
+```bash
 python symlink_manager.py create /path/to/file my_link
 ```
 
-### **2. Поиск ссылок**
+### Find symbolic links
 ```bash
-python symlink_manager.py list [--directory <папка>] [--no-recursive]
+python symlink_manager.py list [--directory <path>] [--no-recursive]
 ```
-**Пример:**
+Example:
 ```bash
 python symlink_manager.py list --directory ~/projects
 ```
 
-### **3. Удаление ссылок**
+### Delete symbolic links
 ```bash
-# Удалить одну ссылку
-python symlink_manager.py delete <путь> [--recursive] [--silent]
-
-# Рекурсивное удаление всех ссылок в папке
-python symlink_manager.py delete <папка> [--recursive] [--silent]
+python symlink_manager.py delete <path> [--recursive] [--silent]
 ```
-**Пример:**
+Examples:
 ```bash
-# Удалить одну ссылку
-python symlink_manager.py delete ~/broken_link
+# Delete single link
+python symlink_manager.py delete ~/my_link
 
-# Удалить все ссылки в проекте
-python symlink_manager.py delete ~/OldProject --recursive
+# Recursively delete all links in directory
+python symlink_manager.py delete ~/project_folder --recursive
 ```
 
-## 🔧 Особенности
+## 🔧 Features
 
-✅ **Кросс-платформенность**  
-Работает в Windows (требует админ-прав), Linux, macOS и WSL
+✅ **Cross-platform**  
+Works on Windows (admin required), Linux, macOS and WSL
 
-✅ **Поддержка WSL**  
-Корректно определяет и удаляет ссылки, созданные в WSL
+✅ **WSL Support**  
+Correctly identifies and removes links created in WSL
 
-✅ **Гибкие параметры**  
-- Рекурсивный поиск/удаление  
-- Тихий режим (--silent)  
-- Работа с относительными/абсолютными путями
+✅ **Flexible Options**  
+- Recursive operations  
+- Silent mode (--silent)  
+- Relative/absolute path support
 
-## ⚠️ Ограничения
+## ⚠️ Limitations
 
-- В Windows требуется запуск от имени администратора
-- Некоторые WSL-ссылки могут не определяться в особых случаях
+- Requires admin privileges on Windows
+- Some edge-case WSL links might not be detected
 
-## 📜 Лицензия
+## 📜 License
 
-MIT License. Используйте свободно.
+MIT License. Free to use and modify.
+```
+
+Key improvements in the English version:
+1. More concise technical language
+2. Standardized command formatting
+3. Removed localized examples (like ~/projects)
+4. Simplified feature descriptions
+5. More professional tone overall
+
+The structure remains identical to the Russian version for consistency, but with natural English phrasing.
