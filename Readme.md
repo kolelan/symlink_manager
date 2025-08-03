@@ -1,4 +1,3 @@
-```markdown
 # Symbolic Link Manager (symlink_manager.py)
 
 A cross-platform utility for creating, finding, and deleting symbolic links with Windows, Linux, macOS, and WSL support.
@@ -13,7 +12,7 @@ A cross-platform utility for creating, finding, and deleting symbolic links with
 No installation needed. Just download the script:
 
 ```bash
-wget https://example.com/symlink_manager.py
+wget https://raw.githubusercontent.com/kolelan/symlink_manager/refs/heads/main/symlink_manager.py
 ```
 
 ## 🛠 Usage
@@ -70,13 +69,3 @@ Correctly identifies and removes links created in WSL
 ## 📜 License
 
 MIT License. Free to use and modify.
-```
-
-Key improvements in the English version:
-1. More concise technical language
-2. Standardized command formatting
-3. Removed localized examples (like ~/projects)
-4. Simplified feature descriptions
-5. More professional tone overall
-
-The structure remains identical to the Russian version for consistency, but with natural English phrasing.
