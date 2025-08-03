@@ -13,7 +13,7 @@
 
 ## 📦 **Установка**
 
-1. Требуется **Python 3.7+**
+1. Требуется **Python 3.6+**
 2. Скачайте скрипт:
    ```bash
    curl -O http://raw.githubusercontent.com/kolelan/symlink_manager/refs/heads/main/symlink_manager.py
